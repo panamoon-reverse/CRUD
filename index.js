@@ -57,7 +57,7 @@ function userCreate() {
   const email = document.getElementById("email").value;
 
   const xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "https://www.mecallapi.com/api/users/create");
+  xhttp.open("POST", "https://www.melivecode.com/api/users/create");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
@@ -65,7 +65,8 @@ function userCreate() {
       lname: lname,
       username: username,
       email: email,
-      avatar: "https://www.spica-siam.com/wp-content/uploads/2017/12/user-demo.png",
+      avatar:
+        "https://cdn-icons-png.flaticon.com/512/8847/8847419.png",
     })
   );
   xhttp.onreadystatechange = function () {
@@ -80,7 +81,7 @@ function userCreate() {
 function showUserEditBox(id) {
   console.log(id);
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "https://www.melivecode.com/api/users" + id);
+  xhttp.open("GET", "https://www.melivecode.com/api/users/" + id);
   xhttp.send();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -122,7 +123,7 @@ function userEdit() {
   const email = document.getElementById("email").value;
 
   const xhttp = new XMLHttpRequest();
-  xhttp.open("PUT", "https://www.mecallapi.com/api/users/update");
+  xhttp.open("PUT", "https://www.melivecode.com/api/users/update");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
@@ -131,7 +132,7 @@ function userEdit() {
       lname: lname,
       username: username,
       email: email,
-      avatar: "https://www.spica-siam.com/wp-content/uploads/2017/12/user-demo.png",
+      avatar: "https://cdn-icons-png.flaticon.com/512/8847/8847419.png",
     })
   );
   xhttp.onreadystatechange = function () {
@@ -145,7 +146,7 @@ function userEdit() {
 
 function userDelete(id) {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("DELETE", "https://www.mecallapi.com/api/users/delete");
+  xhttp.open("DELETE", "https://www.melivecode.com/api/users/delete");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
