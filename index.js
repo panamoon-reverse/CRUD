@@ -57,7 +57,7 @@ function userCreate() {
   const email = document.getElementById("email").value;
 
   const xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "https://www.melivecode.com/api/users");
+  xhttp.open("POST", "https://www.mecallapi.com/api/users/create");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
@@ -122,7 +122,7 @@ function userEdit() {
   const email = document.getElementById("email").value;
 
   const xhttp = new XMLHttpRequest();
-  xhttp.open("PUT", "https://www.melivecode.com/api/users");
+  xhttp.open("PUT", "https://www.mecallapi.com/api/users/update");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
@@ -145,7 +145,7 @@ function userEdit() {
 
 function userDelete(id) {
   const xhttp = new XMLHttpRequest();
-  xhttp.open("DELETE", "https://www.melivecode.com/api/users");
+  xhttp.open("DELETE", "https://www.mecallapi.com/api/users/delete");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(
     JSON.stringify({
